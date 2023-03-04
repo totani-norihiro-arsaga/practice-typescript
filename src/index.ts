@@ -28,10 +28,10 @@ let addNum: (num: number)=>number = (num: number)=>{
     return num + 3;
 } 
 
-function doubleAndHandle(num: number, cb: (num: number) => number) {
-    let double = cb(num * 2);
-    console.log(double);
-}
+// function doubleAndHandle(num: number, cb: (num: number) => number) {
+//     let double = cb(num * 2);
+//     console.log(double);
+// }
 
 doubleAndHandle(5, doubleNum => {
     return doubleNum;
