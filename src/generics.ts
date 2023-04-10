@@ -68,3 +68,15 @@ type ConditionalType = 'tomato' extends string ? number : boolean;
 type ConditionalTypeInfer = {tomato: 'tomato'} extends infer R ? R : boolean;
 type DistributiveConditionalTypes<T> = T extends 'tomato' ? number : boolean;
 let genericsTmp4: DistributiveConditionalTypes<'tomato' | 'pumpkin'>;
+type Condition<U> = {
+    content: U;
+    created_at: Number;
+}
+
+const content: Condition<string> = {
+    content: 'コンテンツ',
+    created_at: 19920101,
+}
+
+type sampletype<H> = H extends string ? string : boolean;
+let sample: sampletype<1234>;
